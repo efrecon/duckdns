@@ -87,3 +87,16 @@ This is a flag that will turn the [`VERBOSE`](#verbose) environment variable to
 
 ## Docker
 
+This project also comes as a Docker image published as
+[`efrecon/duckdns`][docker] at the Docker hub. The image has the script as its
+`ENTRYPOINT`, wrapped by `tini` to facilitate tearing down. It is based on the
+latest stable Alpine version at the time of writing. When building yourself, you
+can instead specify the build argument `ALPINEVER` to use another version.
+
+The following command would run and print help for the image:
+
+```shell
+docker run -it --rm efrecon/duckdns -h
+```
+
+  [docker]: https://hub.docker.com/r/efrecon/duckdns
