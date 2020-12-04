@@ -70,9 +70,9 @@ USAGE
 # Parse options
 while [ $# -gt 0 ]; do
     case "$1" in
-        -d | --domains)
+        -d | --domains | --domain)
             DUCKDNS_DOMAINS=$2; shift 2;;
-        --domains=*)
+        --domains=* | --domain=*)
             # shellcheck disable=SC2034
             DUCKDNS_DOMAINS="${1#*=}"; shift 1;;
 
