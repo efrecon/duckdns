@@ -1,8 +1,6 @@
 #!/usr/bin/env sh
 
-ROOT_DIR=$( cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P )
-
-set -ef
+set -efu
 
 VERBOSE=1
 
